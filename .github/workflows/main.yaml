@@ -23,6 +23,7 @@ jobs:
 
     - name: Build Docker image
       run: |
+        cd python-k8s
         docker build -t culceanluca/test-k8s-python:latest .
     
     - name: Push Docker image
