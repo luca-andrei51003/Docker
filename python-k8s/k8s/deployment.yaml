@@ -15,7 +15,9 @@ spec:
       containers:
         - name: test-k8s-python
           image: test-k8s-python:latest
-          imagePullPolicy: Never
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 8080
           resources:
             requests:
               memory: "64Mi"
