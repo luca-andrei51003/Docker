@@ -7,8 +7,8 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/luca-andrei51003/Docker/'
-    targetRevision: HEAD
-    path: python-k8s/argo
+    targetRevision: main
+    path: python-k8s/k8s
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: test-k8s-python
@@ -16,4 +16,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
-#kubectl port-forward svc/argocd-server -n argocd 8080:443
+    syncOptions:
+      - CreateNamespace=true
