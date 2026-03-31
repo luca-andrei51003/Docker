@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: test-k8s-python
-          image: test-k8s-python:latest
+          image: culceanluca/test-k8s-python:latest
           imagePullPolicy: Always
           ports:
           - containerPort: 8080

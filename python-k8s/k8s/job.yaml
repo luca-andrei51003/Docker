@@ -7,6 +7,6 @@ spec:
     spec:
       containers:
         - name: test-k8s-python
-          image: test-k8s-python:latest
-          imagePullPolicy: Never
+          image: culceanluca/test-k8s-python:latest
+          imagePullPolicy: Always
       restartPolicy: Never

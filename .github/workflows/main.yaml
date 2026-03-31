@@ -21,9 +21,10 @@ jobs:
         username: ${{ secrets.AGENT_USER }}
         password: ${{ secrets.AGENT_PASSWORD }}
 
-    - name: Build and push Docker image
-      uses: docker/build-push-action@v2
-      with:
-        context: .
-        push: true
-        tags: test-k8s-python:latest
+    - name: Build Docker image
+      run: |
+        docker build -t culceanluca/test-k8s-python:latest .
+    
+    - name: Push Docker image
+      run: |
+        docker push culceanluca/test-k8s-python:latest
