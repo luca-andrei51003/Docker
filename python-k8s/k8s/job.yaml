@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: test-k8s-python
+spec:
+  template:
+    spec:
+      containers:
+        - name: test-k8s-python
+          image: test-k8s-python:latest
+          imagePullPolicy: Never
+      restartPolicy: Never
