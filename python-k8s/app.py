@@ -1,6 +1,6 @@
 import time
-counter = 0
+counter = 5
 while True:
     counter += 1
-    print(f"merge {counter}", flush=True)
+    print(f"workflow works. print n0. : {counter}", flush=True)
     time.sleep(5)
